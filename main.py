@@ -6,7 +6,7 @@ import time
 import winsound
 
 # Setup
-log_name = u"Corp"
+log_name = u"Recruitment"
 sentence_of_interest = [u"looking for", u"corp", u"active"]
 folder = u"%s\\Documents\\EVE\\logs\\Chatlogs\\" % (os.path.expanduser("~"))
 
@@ -35,7 +35,6 @@ while True:
 						winsound.Beep(1000, 1500)
 						os.system("echo %s | clip" % (str(line.split("]")[1].split(">")[0].strip().strip("\n\r"))))
 			lines.append(line)
-
 	if first:
 		first = False
 
