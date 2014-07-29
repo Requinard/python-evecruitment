@@ -10,7 +10,7 @@ log_name = u"Corp"
 sentence_of_interest = [u"looking for", u"corp", u"active"]
 folder = u"%s\\Documents\\EVE\\logs\\Chatlogs\\" % (os.path.expanduser("~"))
 
-##############################################
+# #############################################
 # DO NOT TOUCH BELOW
 ##############################################
 
@@ -33,6 +33,7 @@ while True:
 						print("CHAT HIT\nWORD:%s\nLINE: %sUSER:%s\nMESSAGE:%s" % (
 						word, line, line.split("]")[1].split(">")[0], line.split(">")[1]))
 						winsound.Beep(1000, 1500)
+						os.system("echo %s | clip" % (str(line.split("]")[1].split(">")[0].strip().strip("\n\r"))))
 			lines.append(line)
 
 	if first:
